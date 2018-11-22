@@ -24,7 +24,9 @@ body {
 }
 
 header {
+  display: inline-block;
   margin: 0;
+  width: 100%;
 
   background-color: #18294f;
   color: #fff;
@@ -39,19 +41,17 @@ header h1 {
 }
 
 nav ul {
-  margin: 0;
-  padding: .3em 0 .5em;
+  display: inline-block;
+  margin: .3em 0 .5em;
+  padding: 0;
+  list-style-type: none;
 
   font-size: 1.125rem;
-
-  list-style-type: none;
-}
-
-nav ul li {
-  padding: .5em .75em;
 }
 
 nav a {
+  display: inline-block;
+  padding: .5em .75em;
   text-decoration: none;
   white-space: nowrap;
 
@@ -80,6 +80,26 @@ nav a:hover {
   nav ul li {
     text-align: center;
     width: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+  html {
+    line-height: 1.4;
+    font-size: 110%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    text-align: center;
+    width: 25%;
   }
 
 }
